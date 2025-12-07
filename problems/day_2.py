@@ -1,10 +1,13 @@
 # https://adventofcode.com/2025/day/2
 
+from utils import measure_time
+
 DAY = 2
 SAMPLE_DATA_PATH = f"../puzzle-input/{DAY}/sample.txt"
 PUZZLE_DATA_PATH = f"../puzzle-input/{DAY}/puzzle.txt"
 
 
+@measure_time
 def day_2(use_sample=False):
     """
     Part 1: Find repeated number sequences in the ranges from the input. Examples 55, 99, 1010, 123123.

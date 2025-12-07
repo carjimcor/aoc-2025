@@ -1,6 +1,7 @@
 # https://adventofcode.com/2025/day/4
 
 from copy import deepcopy
+from utils import measure_time
 
 DAY = 4
 SAMPLE_DATA_PATH = f"../puzzle-input/{DAY}/sample.txt"
@@ -50,6 +51,7 @@ def compute_rolls_proximity_map(rolls, rolls_prox_map):
     return accessible_rolls, new_rolls
 
 
+@measure_time
 def day_4(use_sample=False):
     """
     Part 1: Find rolls of paper that have fewer than 4 rolls in adjacent positions.
@@ -70,8 +72,8 @@ def day_4(use_sample=False):
         removable_rolls, rolls = compute_rolls_proximity_map(rolls, rolls_proximity_map)
         part_2 += removable_rolls
 
-    print(*rolls, sep="\n")
-    print(*rolls_proximity_map, sep="\n")
+    # print(*rolls, sep="\n")
+    # print(*rolls_proximity_map, sep="\n")
 
     return part_1, part_2
 

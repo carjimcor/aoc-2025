@@ -7,6 +7,9 @@
 # Quotient: -68 // 100 = -1
 # 32 = -68 -(100 * -1)
 
+from utils import measure_time
+
+
 DAY = 1
 SAMPLE_DATA_PATH = f"../puzzle-input/{DAY}/sample.txt"
 PUZZLE_DATA_PATH = f"../puzzle-input/{DAY}/puzzle.txt"
@@ -26,6 +29,7 @@ def process_rotation(current_pos, turn_direction, amount):
     return new_pos, times_over_0
 
 
+@measure_time
 def day_1(use_sample=False):
     """
     Part 1: Count how many times the dial is left pointing at 0 after any rotation in the sequence.

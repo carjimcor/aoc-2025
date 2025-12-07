@@ -1,5 +1,7 @@
 # https://adventofcode.com/2025/day/3
 
+from utils import measure_time
+
 DAY = 3
 SAMPLE_DATA_PATH = f"../puzzle-input/{DAY}/sample.txt"
 PUZZLE_DATA_PATH = f"../puzzle-input/{DAY}/puzzle.txt"
@@ -26,6 +28,7 @@ def get_highest_jolt_part_2(number_sequence: str) -> int:
     return int(jolt)
 
 
+@measure_time
 def day_3(use_sample=False):
     """
     Part 1: In each battery sequence, e.g. '987654321111111' find the highest two-digit number possible -> 98.
